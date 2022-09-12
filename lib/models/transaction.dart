@@ -1,4 +1,3 @@
-/// A class is a blueprint for creating objects which contain some data and some functions
 class Transaction {
   final String id;
   final String title;
