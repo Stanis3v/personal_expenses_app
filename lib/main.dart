@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import './widgets/user_transaction.dart';
 
 void main() => runApp(const MyApp());
@@ -27,7 +28,17 @@ class MyHomePage extends StatelessWidget {
     /// Creating a Scaffold widget.
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PERSONAL EXPENSES APP'),
+        centerTitle: true,
+        title: const Text('MY EXPENSES'),
+        actions: const <Widget>[
+          IconButton(
+            onPressed: null,
+            icon: Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
