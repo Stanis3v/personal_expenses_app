@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables
 
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
@@ -16,7 +18,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'PERSONAL EXPENSES',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.red,
+        scaffoldBackgroundColor: const Color.fromARGB(96, 51, 51, 51),
+        //bottomAppBarColor: Colors.black45,
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 20,
+          titleTextStyle: TextStyle(
+            color: Color.fromARGB(255, 29, 29, 29),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       home: MyHomePage(),
     );
@@ -82,8 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: <Widget>[
           IconButton(
             onPressed: () => _startAddNewTransaction(context),
-            icon: Icon(
-              Icons.add,
+            icon: const Icon(
+              Icons.add_circle_outline,
               color: Colors.white,
             ),
           ),
@@ -97,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               width: double.infinity,
               child: Card(
-                color: Colors.blue,
+                color: Theme.of(context).primaryColorDark,
                 child: Text('CHART'),
                 elevation: 5,
               ),
@@ -108,8 +120,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.transparent,
         child: Icon(
-          Icons.add,
+          Icons.add_circle_outline_sharp,
           color: Colors.white,
         ),
         onPressed: () => _startAddNewTransaction(context),
