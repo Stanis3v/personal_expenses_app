@@ -1,7 +1,3 @@
-// ignore_for_file: prefer_const_constructors_in_immutables
-
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
@@ -18,25 +14,25 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'PERSONAL EXPENSES',
       theme: ThemeData(
-        primarySwatch: Colors.red,
-        scaffoldBackgroundColor: const Color.fromARGB(96, 51, 51, 51),
+        primaryColor: Color.fromARGB(255, 45, 223, 247),
+        scaffoldBackgroundColor: Color.fromARGB(236, 253, 253, 247),
         //bottomAppBarColor: Colors.black45,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           elevation: 20,
           titleTextStyle: TextStyle(
-            color: Color.fromARGB(255, 29, 29, 29),
+            color: Color.fromARGB(255, 54, 54, 54),
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -95,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
             onPressed: () => _startAddNewTransaction(context),
             icon: const Icon(
-              Icons.add_circle_outline,
+              Icons.add,
               color: Colors.white,
             ),
           ),
@@ -110,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               child: Card(
                 color: Theme.of(context).primaryColorDark,
-                child: Text('CHART'),
+                child: const Text('CHART'),
                 elevation: 5,
               ),
             ),
@@ -121,8 +117,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.transparent,
-        child: Icon(
-          Icons.add_circle_outline_sharp,
+        child: const Icon(
+          Icons.add,
           color: Colors.white,
         ),
         onPressed: () => _startAddNewTransaction(context),
