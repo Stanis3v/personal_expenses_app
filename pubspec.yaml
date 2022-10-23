@@ -75,13 +75,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: ALBA
+    - family: Jersey M54
       fonts:
-        - asset: assets/fonts/ALBA___.ttf
-          weight: 700
-    - family: NeonGlow
-      fonts:
-        - asset: assets/fonts/NeonGlow.ttf
+        - asset: assets/fonts/Jersey M54.ttf
           weight: 700
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -17,7 +17,7 @@ class TransactionList extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(15, 3, 15, 3),
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColorLight,
+                color: Colors.cyan.shade50,
               ),
               child: Row(
                 children: <Widget>[
@@ -26,7 +26,7 @@ class TransactionList extends StatelessWidget {
                         vertical: 15, horizontal: 25),
                     decoration: BoxDecoration(
                       border: Border.all(
-                          color: Theme.of(context).primaryColorDark, width: 1),
+                          color: Theme.of(context).primaryColorLight, width: 1),
                     ),
                     padding: const EdgeInsets.all(5),
                     child: Text(
@@ -35,7 +35,7 @@ class TransactionList extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
                         fontSize: 14.0,
-                        color: Theme.of(context).primaryColorDark,
+                        color: Colors.blueGrey.shade900,
                       ),
                     ),
                   ),
@@ -60,7 +60,7 @@ class TransactionList extends StatelessWidget {
                           fontStyle: FontStyle.normal,
                           fontSize: 12.0,
                           fontWeight: FontWeight.normal,
-                          color: Theme.of(context).primaryColorDark,
+                          color: Colors.blueGrey.shade700,
                         ),
                         textAlign: TextAlign.start,
                       ),

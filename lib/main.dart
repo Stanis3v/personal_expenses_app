@@ -14,9 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'PERSONAL EXPENSES',
       theme: ThemeData(
-        primaryColor: Color.fromARGB(255, 45, 223, 247),
-        scaffoldBackgroundColor: Color.fromARGB(236, 253, 253, 247),
-        //bottomAppBarColor: Colors.black45,
+        primarySwatch: Colors.cyan,
+        fontFamily: 'NeonGlow',
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           elevation: 20,
@@ -92,7 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () => _startAddNewTransaction(context),
             icon: const Icon(
               Icons.add,
-              color: Colors.white,
+              color: Colors.cyanAccent,
+              size: 30,
             ),
           ),
         ],
@@ -119,7 +119,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.transparent,
         child: const Icon(
           Icons.add,
-          color: Colors.white,
+          color: Colors.cyanAccent,
+          size: 40,
         ),
         onPressed: () => _startAddNewTransaction(context),
       ),
