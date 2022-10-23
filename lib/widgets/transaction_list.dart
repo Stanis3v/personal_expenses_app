@@ -31,12 +31,15 @@ class TransactionList extends StatelessWidget {
                     padding: const EdgeInsets.all(5),
                     child: Text(
                       '\$${transactions[index].amount.toStringAsFixed(2)}\$',
-                      style: TextStyle(
+                      style: Theme.of(context).textTheme.subtitle2,
+                      /**
+                      TextStyle(
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
                         fontSize: 14.0,
                         color: Colors.blueGrey.shade900,
                       ),
+                      */
                     ),
                   ),
                   Column(
@@ -45,12 +48,14 @@ class TransactionList extends StatelessWidget {
                       Text(
                         transactions[index].title,
                         textAlign: TextAlign.start,
-                        style: TextStyle(
+                        style: Theme.of(context).textTheme.subtitle1,                        
+                        /**TextStyle(
                           fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.bold,
-                          fontSize: 16.0,
+                          fontSize: 18.0,
                           color: Theme.of(context).primaryColorDark,
                         ),
+                        */
                       ),
                       Text(
                         DateFormat.yMMMMd("en_US")

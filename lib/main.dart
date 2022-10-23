@@ -15,13 +15,30 @@ class MyApp extends StatelessWidget {
       title: 'PERSONAL EXPENSES',
       theme: ThemeData(
         primarySwatch: Colors.cyan,
-        fontFamily: 'NeonGlow',
+        fontFamily: 'Jersey M54',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              subtitle1: const TextStyle(
+                fontFamily: 'JerseyM54',
+                color: Color.fromARGB(255, 1, 106, 122),
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+              subtitle2: 
+              const TextStyle(
+                fontFamily: 'JerseyM54',
+                color: Color.fromARGB(255, 34, 34, 34),
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           elevation: 20,
           titleTextStyle: TextStyle(
             color: Color.fromARGB(255, 54, 54, 54),
             fontWeight: FontWeight.bold,
+            fontSize: 20,
+            fontFamily: 'Jersey N54',
           ),
         ),
       ),
